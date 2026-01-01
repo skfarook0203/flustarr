@@ -115,4 +115,17 @@ button:hover {
     .logo {
         font-size: 24px;
     }
+}.cart-message {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  background: #28a745;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  display: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  z-index: 1000;
 }
+
