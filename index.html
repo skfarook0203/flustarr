@@ -1,29 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Flustar | Home</title>
-    <!-- Cart Message -->
-<div id="cart-message" class="cart-message"></div>
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Flustar | Online Store</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-    <h1 class="logo">🛒 Flustar</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
-        <a href="cart.html">Cart</a>
-    </nav>
+<!-- HEADER -->
+<header class="header">
+  <h1>🛒 Flustar</h1>
+  <p>Your Smart Online Store</p>
 </header>
 
-<main>
-    <h2>Welcome to Flustar</h2>
-    <p>Your trusted online store for quality products at the best prices.</p>
+<!-- SCROLLING DISCOUNT BAR -->
+<div class="scroll-bar">
+  <div class="scroll-text">
+    🔥 Flat 24% OFF on all products | 🚚 Free Delivery | 💳 Cash on Delivery Available | 🎉 New Year Sale
+  </div>
+</div>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <h2>Welcome to Flustar</h2>
+  <p>Best Deals • Trusted Products • Smart Prices</p>
+  <button onclick="scrollToProducts()">Shop Now</button>
+</section>
+
+<!-- DISCOUNT CARDS -->
+<section class="offers">
+  <div class="offer-card">🔥 24% OFF Storewide</div>
+  <div class="offer-card">🚚 Free Shipping</div>
+  <div class="offer-card">💳 Pay on Delivery</div>
+</section>
+
+<!-- MAIN CONTENT -->
+<main class="container" id="products">
+
+  <!-- PRODUCTS -->
+  <section class="products">
+    <h2>Products</h2>
+
+    <div class="product">
+      <h3>T‑Shirt</h3>
+      <p>Price: ₹499</p>
+      <button onclick="addToCart('T‑Shirt', 499)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <h3>Shoes</h3>
+      <p>Price: ₹1999</p>
+      <button onclick="addToCart('Shoes', 1999)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <h3>Watch</h3>
+      <p>Price: ₹2999</p>
+      <button onclick="addToCart('Watch', 2999)">Add to Cart</button>
+    </div>
+
+  </section>
+
+  <!-- CART -->
+  <section class="cart">
+    <h2>Cart</h2>
+    <ul id="cartItems"></ul>
+    <p id="total">Total: ₹0</p>
+    <p id="cartMsg" class="cart-msg"></p>
+  </section>
+
 </main>
 
+<script src="script.js"></script>
 </body>
 </html>
-
