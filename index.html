@@ -2,42 +2,90 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My First Store</title>
+    <title>My Mini E‑Commerce Store</title>
+
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
-            background: #f5f5f5;
+            background: #f4f6f8;
+            margin: 0;
+            padding: 0;
         }
 
-        button {
-            padding: 8px 12px;
-            margin: 5px;
-            cursor: pointer;
+        header {
+            background: #007bff;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px;
         }
 
         .box {
             background: white;
             width: 300px;
-            margin: 15px auto;
-            padding: 15px;
-            border-radius: 6px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .product {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 7px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        .remove-btn {
+            background: #dc3545;
+        }
+
+        .remove-btn:hover {
+            background: #a71d2a;
         }
     </style>
 </head>
 <body>
 
-    <h1>Hello World 👋</h1>
-    <p>This is my first website hosted using GitHub.</p>
+<header>
+    <h1>🛒 My Mini Store</h1>
+    <p>Built using HTML, CSS & JavaScript</p>
+</header>
 
+<div style="text-align:center; margin-top:20px;">
     <button onclick="showProducts()">Show Products</button>
+</div>
 
-    <div id="productList"></div>
+<div class="container">
+    <div id="productList" class="box">
+        <h3>Products</h3>
+        <p>Click "Show Products"</p>
+    </div>
 
-    <h2>🛒 Cart</h2>
-    <div id="cart" class="box">Cart is empty</div>
+    <div class="box">
+        <h3>Cart</h3>
+        <div id="cart">Cart is empty</div>
+    </div>
+</div>
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
+
