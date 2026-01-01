@@ -10,55 +10,29 @@
 <!-- HEADER -->
 <header class="header">
   <h1>🛒 Flustar</h1>
-  <p>Your Smart Online Store</p>
+  <p>Smart Deals. Smart Shopping.</p>
 </header>
 
 <!-- SCROLLING DISCOUNT BAR -->
 <div class="scroll-bar">
   <div class="scroll-text">
-    🔥 Flat 24% OFF on all products | 🚚 Free Delivery | 💳 Cash on Delivery Available | 🎉 New Year Sale
+    🔥 🚚 Free Delivery | 💳 Cash on Delivery | 🎉 Today’s Deals
   </div>
 </div>
 
-<!-- HERO SECTION -->
-<section class="hero">
-  <h2>Welcome to Flustar</h2>
-  <p>Best Deals • Trusted Products • Smart Prices</p>
-  <button onclick="scrollToProducts()">Shop Now</button>
+<!-- HOME DEALS (AUTO FROM PRODUCTS) -->
+<section class="home-deals">
+  <h2>🔥 Today’s Deals</h2>
+  <div id="dealProducts" class="deal-grid"></div>
 </section>
 
-<!-- DISCOUNT CARDS -->
-<section class="offers">
-  <div class="offer-card">🔥 24% OFF Storewide</div>
-  <div class="offer-card">🚚 Free Shipping</div>
-  <div class="offer-card">💳 Pay on Delivery</div>
-</section>
-
-<!-- MAIN CONTENT -->
-<main class="container" id="products">
+<!-- PRODUCTS + CART -->
+<main class="container">
 
   <!-- PRODUCTS -->
   <section class="products">
-    <h2>Products</h2>
-
-    <div class="product">
-      <h3>T‑Shirt</h3>
-      <p>Price: ₹499</p>
-      <button onclick="addToCart('T‑Shirt', 499)">Add to Cart</button>
-    </div>
-
-    <div class="product">
-      <h3>Shoes</h3>
-      <p>Price: ₹1999</p>
-      <button onclick="addToCart('Shoes', 1999)">Add to Cart</button>
-    </div>
-
-    <div class="product">
-      <h3>Watch</h3>
-      <p>Price: ₹2999</p>
-      <button onclick="addToCart('Watch', 2999)">Add to Cart</button>
-    </div>
-
+    <h2>All Products</h2>
+    <div id="allProducts"></div>
   </section>
 
   <!-- CART -->
