@@ -34,7 +34,7 @@ function saveCart() {
 function addToCart(index) {
     cart.push(products[index]);
     saveCart();
-    alert("Added to cart");
+    
 }
 
 // Remove from cart
@@ -85,4 +85,13 @@ function loadCart() {
 
 loadProducts();
 loadCart();
+function showCartMessage(text) {
+  const msg = document.getElementById("cart-message");
+  msg.innerText = text;
+  msg.style.display = "block";
+
+  setTimeout(() => {
+    msg.style.display = "none";
+  }, 2000);
+}
 
