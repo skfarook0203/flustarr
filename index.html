@@ -1,20 +1,43 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My First Website</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>My First Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #f5f5f5;
+        }
+
+        button {
+            padding: 8px 12px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .box {
+            background: white;
+            width: 300px;
+            margin: 15px auto;
+            padding: 15px;
+            border-radius: 6px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    </style>
 </head>
 <body>
-  <h1>Hello World 👋</h1>
-  <p>This is my first website hosted using GitHub.</p>
-  
-<div id="productList"></div>
-  <h2>Cart</h2>
-<div id="cart"></div>
 
-<script src="script.js"></script>
+    <h1>Hello World 👋</h1>
+    <p>This is my first website hosted using GitHub.</p>
 
+    <button onclick="showProducts()">Show Products</button>
 
+    <div id="productList"></div>
+
+    <h2>🛒 Cart</h2>
+    <div id="cart" class="box">Cart is empty</div>
+
+    <script src="script.js"></script>
 </body>
 </html>
