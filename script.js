@@ -1,57 +1,60 @@
+// PRODUCTS DATA
 const products = [
-    { name: "T‑Shirt", price: 499 },
+    { name: "T-Shirt", price: 499 },
     { name: "Shoes", price: 1999 },
     { name: "Watch", price: 2999 }
 ];
 
-let cart = [];
+// CART (load from localStorage or empty)
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-function showProducts() {
-    let output = "";
-
-    products.forEach((product, index) => {
-        output += `
-            <div class="product">
-                <strong>${product.name}</strong><br>
-                Price: ₹${product.price}<br>
-                <button onclick="addToCart(${index})">Add to Cart</button>
-            </div>
-        `;
-    });
-
-    document.getElementById("productList").innerHTML =
-        "<h3>Products</h3>" + output;
+// SAVE CART TO LOCAL STORAGE
+function saveCart() {
+    localStorage.setItem("cart", JSON.stringify(cart));
 }
 
+// SHOW / HIDE PRODUCTS
+function toggleProducts() {
+    const productSection = document.getElementById("products");
+    productSection.style.display =
+        productSection.style.display === "none" ? "block" : "none";
+}
+
+// ADD TO CART
 function addToCart(index) {
     cart.push(products[index]);
+    saveCart();
     updateCart();
 }
 
+// REMOVE FROM CART
 function removeFromCart(index) {
     cart.splice(index, 1);
+    saveCart();
     updateCart();
 }
 
+// UPDATE CART UI
 function updateCart() {
-    if (cart.length === 0) {
-        document.getElementById("cart").innerHTML = "Cart is empty";
-        return;
-    }
+    const cartList = document.getElementById("cart-items");
+    const totalElement = document.getElementById("total");
+    cartList.innerHTML = "";
 
     let total = 0;
-    let output = "<ul>";
 
     cart.forEach((item, index) => {
         total += item.price;
-        output += `
-            <li>
-                ${item.name} - ₹${item.price}
-                <button class="remove-btn" onclick="removeFromCart(${index})">X</button>
-            </li>
+
+        const li = document.createElement("li");
+        li.innerHTML = `
+            ${item.name} - ₹${item.price}
+            <button onclick="removeFromCart(${index})" class="remove-btn">X</button>
         `;
+        cartList.appendChild(li);
     });
 
-    output += `</ul><strong>Total: ₹${total}</strong>`;
-    document.getElementById("cart").innerHTML = output;
+    totalElement.innerText = total;
 }
+
+// INITIAL LOAD
+updateCart();
