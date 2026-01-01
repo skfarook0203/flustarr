@@ -5,9 +5,13 @@ const products = [
 ];
 
 function showProducts() {
-  let output = "";
+  let output = "<h3>Products</h3><ul>";
+
   products.forEach((product) => {
-    output += product.name + " - ₹" + product.price + "\n";
+    output += `<li>${product.name} - ₹${product.price}</li>`;
   });
-  alert(output);
+
+  output += "</ul>";
+
+  document.getElementById("productList").innerHTML = output;
 }
