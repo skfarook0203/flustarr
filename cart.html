@@ -24,3 +24,8 @@
 <script src="script.js"></script>
 </body>
 </html>
+function addToCart(name, price) {
+  cart.push({ name, price });
+  updateCart();
+  showCartMessage("Added to cart ✅");
+}
