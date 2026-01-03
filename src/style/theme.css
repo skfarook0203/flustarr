@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+}
+
+.navbar {
+  background: #5a2d2d;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar a {
+  color: #ffd1dc;
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+.container {
+  padding: 20px;
+}
+
+.product {
+  border: 1px solid #f2c2cc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+button {
+  background: #f2a1b3;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+}
